@@ -20,6 +20,4 @@ services:
     working_dir: /var/www/php
     volumes:
       - ./:/var/www/php
-      - ./.docker/php/conf.d:/usr/local/etc/php/custom.d
-    environment:
-      PHP_INI_SCAN_DIR: "/usr/local/etc/php/conf.d:/usr/local/etc/php/custom.d"
+      - ./.docker/php/conf.d/php.ini:/usr/local/etc/php-fpm.d/www2.conf
